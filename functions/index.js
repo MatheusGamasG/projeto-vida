@@ -7,6 +7,9 @@ admin.initializeApp();
 
 const db = admin.firestore().collection("donors");
 
+const cors = require('cors');
+app.use(cors({origin:'https://matheusgamasg.github.io'}))
+
 app.get("/donors", function(request, response){
     db.get()
         .then(function(documents){
@@ -21,7 +24,9 @@ app.get("/donors", function(request, response){
 
 app.post("/donors", function(request, response){
     const newDonor = {
-        name : request.body.name
+        name : request.body.name,
+        telefone : request.body.telefone,
+
     }
 
     db.add(newDonor)
