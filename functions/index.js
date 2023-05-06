@@ -16,7 +16,7 @@ app.get("/donors", function(request, response){
         .then(function(documents){
             let donors = [];
             documents.forEach(doc => {
-                donors.push({id: doc.id, name:doc.data().name});
+                donors.push({id: doc.id, donorName:doc.data().donorName});
             });
 
             response.json(donors);
