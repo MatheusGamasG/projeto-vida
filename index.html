@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projeto Vida</title>
 </head>
 <body>
-    <form">
-        <label for="name">Nome: </label><input type="text" id="name" class="name-input"/>
-        <label for="telefone">Telefone: </label><input type="text" id="telefone" class="tel-input"/>
+    <h1>Cadastrar Doador</h1>
+    <form>
+        <fieldset>
+            <label for="donorName">Nome do doador: </label><input required type="text" id="donorName" class="donorName-input"/>
+            <label for="species">Espécie: </label><input required type="text" id="species" class="species-input"/>
+            <label for="race">Raça: </label><input required type="text" id="race" class="race-input"/>
+            <label for="birthDate">Data de Nascimento: </label><input required type="date" id="birthDate" class="birthDate-input"/>
+            <label for="weight">Peso: </label><input required type="text" id="weight" class="weight-input"/>
+            <label for="tutorName">Nome do Tutor: </label><input required type="text" id="tutorName" class="tutorName-input"/>
+        </fieldset>
+        <label for="cellphone">Telefone 1: </label><input required type="text" id="cellphone" class="cellphone-input"/>
+        <label for="cellphone2">Telefone 2: </label><input type="text" id="cellphone2" class="cellphone2-input"/>
+        <label for="email">E-mail: </label><input required type="text" id="email" class="email-input"/>
+        <label for="instagram">Instagram: </label><input required type="text" id="instagram" class="instagram-input"/>
+        <!-- Aba cadastrar doação
+        Aba disponíveis para doação -->
         <button class="submit-button">Submit</button>
     </form>
     <script src="index.js"></script>    
