@@ -17,6 +17,7 @@ button.addEventListener('click', (e) => {
         donorName : donorNameInput.value,
         species : speciesInput.value,
         race : raceInput.value,
+        birthDate : birthDateInput.value,
         weight : weightInput.value,
         tutorName : tutorNameInput.value,
         cellphone : cellphoneInput.value,
@@ -24,7 +25,7 @@ button.addEventListener('click', (e) => {
         email : emailInput.value,
         instagram : instagramInput.value
     }
-    
+
     fetch('https://us-central1-projeto-vida-ec162.cloudfunctions.net/api/donors', {
         method: "POST",
         body: JSON.stringify(donor),

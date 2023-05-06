@@ -24,9 +24,16 @@ app.get("/donors", function(request, response){
 
 app.post("/donors", function(request, response){
     const newDonor = {
-        name : request.body.name,
-        telefone : request.body.telefone,
-
+        donorName : request.body.donorName,
+        species : request.body.species,
+        race : request.body.race,
+        birthDate : request.body.birthDate,
+        weight : request.body.weight,
+        tutorName : request.body.tutorName,
+        cellphone : request.body.cellphone,
+        cellphone2 : request.body.cellphone2,
+        email : request.body.email,
+        instagram : request.body.instagram
     }
 
     db.add(newDonor)
