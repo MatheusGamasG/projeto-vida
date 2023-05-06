@@ -5,13 +5,14 @@ const app = require("express")();
 const admin = require("firebase-admin");
 admin.initializeApp();
 
-const db = admin.firestore().collection("donors");
+const db = admin.firestore();
+const collectionRef = db.collection("donors");
 
 const cors = require('cors');
 app.use(cors({origin:'https://matheusgamasg.github.io'}))
 
 app.get("/donors", function(request, response){
-    db.get()
+    collectionRef.get()
         .then(function(documents){
             let donors = [];
             documents.forEach(doc => {
@@ -36,9 +37,9 @@ app.post("/donors", function(request, response){
         instagram : request.body.instagram
     }
 
-    db.add(newDonor)
+    collectionRef.add(newDonor)
         .then(function() {
-            response.status(200);
+            response.status(200).send("Donor added successfully.");
         })
 });
 
