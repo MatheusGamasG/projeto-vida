@@ -12,7 +12,7 @@ function createDonors(donors) {
         const newDonor = document.createElement('li');
         const donorName = document.createElement('p');
         donorName.innerHTML = donors[i].donorName;
-        element.appendChild(donorName);
+        newDonor.appendChild(donorName);
         list.appendChild(newDonor);
     }
 }
