@@ -1,7 +1,10 @@
 const list = document.querySelector('.donor-list');
 
 fetch('https://us-central1-projeto-vida-ec162.cloudfunctions.net/api/donors').
-    then(response => {createDonors(response.json())});
+    then(response => {
+        response = response.json();
+        createDonors(response)
+    });
 
 
 function createDonors(donors) {
