@@ -4,6 +4,7 @@ fetch('https://us-central1-projeto-vida-ec162.cloudfunctions.net/api/donors')
     .then(response => {
         donorsArray = response.json();
         console.log(donorsArray);
+        console.log("passed here");
         createDonors(donorsArray);
     });
 
