@@ -5,7 +5,7 @@ fetch('https://us-central1-projeto-vida-ec162.cloudfunctions.net/api/donors').
 
 
 function createDonors(donors) {
-    for await (const donor of donors) {
+    for(let i = 0; i < donors.length; i++) {
         const newDonor = document.createElement('li');
         const donorName = document.createElement('p');
         donorName.innerHTML = donors[i].donorName;
